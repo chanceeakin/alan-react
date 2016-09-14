@@ -21435,10 +21435,10 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var styles = __webpack_require__(173);
+	var Test = __webpack_require__(173);
 
-	module.exports = React.createClass({
-		displayName: 'exports',
+	var Index = React.createClass({
+		displayName: 'Index',
 
 
 		getInitialState: function getInitialState() {
@@ -21447,65 +21447,48 @@
 		render: function render() {
 			return React.createElement(
 				'div',
-				null,
+				{ className: 'center-align' },
 				React.createElement(
 					'div',
-					{ className: 'jumbotron text-center', style: styles.jumbotron },
+					{ className: 'jumbotron text-center' },
 					React.createElement(
 						'div',
 						{ className: 'container' },
 						React.createElement(
-							'h2',
-							{ className: 'main-header', style: styles.mainHeader },
-							'TEST BITCH'
+							'h1',
+							{ className: 'main-header' },
+							'AP Human Geography'
 						)
-					)
-				),
-				React.createElement(
-					'div',
-					null,
-					this.props.children
-				),
-				React.createElement('br', null)
+					),
+					React.createElement(Test, null)
+				)
 			);
 		}
 	});
 
+	module.exports = Index;
+
 /***/ },
 /* 173 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	module.exports = {
-		jumbotron: {
-			backgroundColor: '#161e27',
-			color: '#ecf0f1'
-		},
-		mainHeader: {
-			fontWeight: 100,
-			fontSize: '4.5em'
-		},
-		button: {
-			fontWeight: 300,
-			marginLeft: 5,
-			marginRight: 5
-		},
-		footer: {
-			position: 'absolute',
-			bottom: 0,
-			width: '100%',
-			backgroundColor: '#161e27',
-			color: '#ecf0f1',
-			fontWeight: 100,
-			fontSize: '1em',
-			padding: 20
-		},
-		footerText: {
-			display: 'inline-block',
-			marginRight: 15
+	var React = __webpack_require__(1);
+
+	var Test = React.createClass({
+		displayName: 'Test',
+
+		render: function render() {
+			return React.createElement(
+				'h2',
+				null,
+				'Here\'s where more fun stuff goes!'
+			);
 		}
-	};
+	});
+
+	module.exports = Test;
 
 /***/ }
 /******/ ]);

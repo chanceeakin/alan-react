@@ -10,6 +10,12 @@ gulp.task('sass', function () {
 		.pipe(gulp.dest('public/css'));
 });
 
+gulp.task('materialize', function () {
+	return gulp.src('bower_components/materialize/sass/materialize.scss')
+	.pipe(sass())
+	.pipe(gulp.dest('public/css'));
+});
+
 gulp.task('start', function () {
 	nodemon({
 		script: 'server.js',
@@ -20,5 +26,6 @@ gulp.task('start', function () {
 
 gulp.task('watch', function () {
 	gulp.watch('scss/style.scss', ['sass']);
+	gulp.watch('scss/materialize.scss', ['materialize']);
 	// Other watchers
 });
