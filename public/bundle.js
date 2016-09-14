@@ -21435,11 +21435,15 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var Test = __webpack_require__(173);
+	var SideBar = __webpack_require__(173);
+	var Content = __webpack_require__(174);
+
+	var styles = {
+		height: '100vh'
+	};
 
 	var Index = React.createClass({
 		displayName: 'Index',
-
 
 		getInitialState: function getInitialState() {
 			return null;
@@ -21450,7 +21454,7 @@
 				{ className: 'center-align' },
 				React.createElement(
 					'div',
-					{ className: 'jumbotron text-center' },
+					{ className: 'jumbotron text-center', style: { height: styles.height } },
 					React.createElement(
 						'div',
 						{ className: 'container' },
@@ -21459,8 +21463,13 @@
 							{ className: 'main-header' },
 							'AP Human Geography'
 						)
-					),
-					React.createElement(Test, null)
+					)
+				),
+				React.createElement(
+					'div',
+					{ className: 'row' },
+					React.createElement(SideBar, null),
+					React.createElement(Content, null)
 				)
 			);
 		}
@@ -21476,19 +21485,59 @@
 
 	var React = __webpack_require__(1);
 
-	var Test = React.createClass({
-		displayName: 'Test',
+	var style = {
+		height: '100vh',
+		background: 'tomato'
+	};
+
+	var SideBar = React.createClass({
+		displayName: 'SideBar',
 
 		render: function render() {
 			return React.createElement(
-				'h2',
-				null,
-				'Here\'s where more fun stuff goes!'
+				'div',
+				{ className: 'col s3', style: { backgroundColor: style.background } },
+				React.createElement(
+					'h2',
+					null,
+					'Here\'s where more fun stuff goes!'
+				)
 			);
 		}
 	});
 
-	module.exports = Test;
+	module.exports = SideBar;
+
+/***/ },
+/* 174 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var style = {
+		height: '100vh',
+		background: 'cyan'
+	};
+
+	var SideBar = React.createClass({
+		displayName: 'SideBar',
+
+		render: function render() {
+			return React.createElement(
+				'div',
+				{ className: 'col s9', style: { backgroundColor: style.background } },
+				React.createElement(
+					'h2',
+					null,
+					'Ooooh wee. More content here.'
+				)
+			);
+		}
+	});
+
+	module.exports = SideBar;
 
 /***/ }
 /******/ ]);
