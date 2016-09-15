@@ -1,0 +1,22 @@
+.jumbotron {
+  background-image: url("../img/river.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  padding: 0px;
+  margin: 0; }
+
+.jumbotron .darken-effect {
+  background: rgba(0, 0, 0, 0.3);
+  height: 100vh; }
+
+.menu-button {
+  margin: 2rem; }
+
+.main-header {
+  margin: 0;
+  padding-top: 60vh;
+  color: #fff; }
+
+.triple {
+  padding: 0px; }

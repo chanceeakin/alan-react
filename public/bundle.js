@@ -21435,12 +21435,10 @@
 	'use strict';
 
 	var React = __webpack_require__(1);
-	var SideBar = __webpack_require__(173);
-	var Content = __webpack_require__(174);
-
-	var styles = {
-		height: '100vh'
-	};
+	var SideBar = __webpack_require__(255);
+	var Content = __webpack_require__(253);
+	var Jumbotron = __webpack_require__(254);
+	var Triple = __webpack_require__(256);
 
 	var Index = React.createClass({
 		displayName: 'Index',
@@ -21451,25 +21449,20 @@
 		render: function render() {
 			return React.createElement(
 				'div',
-				{ className: 'center-align' },
-				React.createElement(
-					'div',
-					{ className: 'jumbotron text-center', style: { height: styles.height } },
-					React.createElement(
-						'div',
-						{ className: 'container' },
-						React.createElement(
-							'h1',
-							{ className: 'main-header' },
-							'AP Human Geography'
-						)
-					)
-				),
+				null,
 				React.createElement(
 					'div',
 					{ className: 'row' },
 					React.createElement(SideBar, null),
+					React.createElement(Jumbotron, null),
 					React.createElement(Content, null)
+				),
+				React.createElement(
+					'div',
+					{ className: 'row' },
+					React.createElement(Triple, null),
+					React.createElement(Triple, null),
+					React.createElement(Triple, null)
 				)
 			);
 		}
@@ -21478,38 +21471,87 @@
 	module.exports = Index;
 
 /***/ },
-/* 173 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-
-	var style = {
-		height: '100vh',
-		background: 'tomato'
-	};
-
-	var SideBar = React.createClass({
-		displayName: 'SideBar',
-
-		render: function render() {
-			return React.createElement(
-				'div',
-				{ className: 'col s3', style: { backgroundColor: style.background } },
-				React.createElement(
-					'h2',
-					null,
-					'Here\'s where more fun stuff goes!'
-				)
-			);
-		}
-	});
-
-	module.exports = SideBar;
-
-/***/ },
-/* 174 */
+/* 173 */,
+/* 174 */,
+/* 175 */,
+/* 176 */,
+/* 177 */,
+/* 178 */,
+/* 179 */,
+/* 180 */,
+/* 181 */,
+/* 182 */,
+/* 183 */,
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */,
+/* 203 */,
+/* 204 */,
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */,
+/* 228 */,
+/* 229 */,
+/* 230 */,
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21538,6 +21580,121 @@
 	});
 
 	module.exports = SideBar;
+
+/***/ },
+/* 254 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var Jumbotron = React.createClass({
+		displayName: "Jumbotron",
+
+		render: function render() {
+			return React.createElement(
+				"div",
+				null,
+				React.createElement(
+					"div",
+					{ className: "jumbotron center-align" },
+					React.createElement(
+						"div",
+						{ className: "darken-effect" },
+						React.createElement(
+							"h1",
+							{ className: "main-header" },
+							"AP Human Geography"
+						),
+						React.createElement(
+							"a",
+							{ className: "waves-effect waves-light btn amber darken-4" },
+							"Let's Begin."
+						)
+					)
+				)
+			);
+		}
+	});
+
+	module.exports = Jumbotron;
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var SideBar = React.createClass({
+		displayName: "SideBar",
+
+		getInitialState: function getInitialState() {
+			return {
+				menuShow: false
+			};
+		},
+		showMenu: function showMenu() {
+			if (!this.state.menuShow) {
+				this.setState({
+					menuShow: true
+				});
+			}
+		},
+		render: function render() {
+			return React.createElement(
+				"div",
+				{ className: "col s3" },
+				React.createElement(
+					"a",
+					{ className: "menu-button btn-floating btn-large waves-effect waves-light amber darken-4" },
+					React.createElement(
+						"i",
+						{ className: "material-icons" },
+						"view_list"
+					)
+				)
+			);
+		}
+	});
+
+	module.exports = SideBar;
+
+/***/ },
+/* 256 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var style = {
+		height: '50vh'
+	};
+
+	var Triple = React.createClass({
+		displayName: 'Triple',
+
+		render: function render() {
+			return React.createElement(
+				'div',
+				null,
+				React.createElement(
+					'div',
+					{ className: 'col s4 center-align triple', style: { height: style.height } },
+					React.createElement(
+						'h3',
+						null,
+						'This is where triple text will go.'
+					)
+				)
+			);
+		}
+	});
+
+	module.exports = Triple;
 
 /***/ }
 /******/ ]);

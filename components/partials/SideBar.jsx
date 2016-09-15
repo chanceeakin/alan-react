@@ -1,15 +1,22 @@
 var React = require('react');
 
-var style = {
-	height: '100vh',
-	background: 'tomato'
-};
-
 var SideBar = React.createClass({
+	getInitialState: function () {
+		return {
+			menuShow: false
+		};
+	},
+	showMenu: function () {
+		if (!this.state.menuShow) {
+			this.setState({
+				menuShow: true
+			});
+		}
+	},
 	render: function () {
 		return (
-			<div className="col s3" style={{backgroundColor: style.background}}>
-				<h2>Here's where more fun stuff goes!</h2>
+			<div className="col s3">
+				<a className="menu-button btn-floating btn-large waves-effect waves-light amber darken-4"><i className="material-icons">view_list</i></a>
 			</div>
 		);
 	}
