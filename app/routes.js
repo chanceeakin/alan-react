@@ -2,15 +2,18 @@
 var React = require('react');
 
 // Include the Router
-var Router = require('react-router').Route;
-
+import {Router, Route, Link, browserHistory} from 'react-router';
 //  Include the IndexRoute (catch-all route)
-var IndexRoute = Router.IndexRoute;
+// var IndexRoute = Router.IndexRoute;
 
 // Reference the high-level components
-var Main = require('../components/Index');
+var Index = require('../components/pages/Index');
+var ContentPage = require('../components/pages/ContentPage.jsx');
 
 // Export the Routes
 module.exports = (
-	<Router path="/" component={Main}></Router>
+	<Router>
+		<Route path="/" component={Index} />
+		<Route path="/about" component={ContentPage} />
+	</Router>
 );

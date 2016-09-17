@@ -30,7 +30,8 @@ main {
   color: #fff; }
 
 .content {
-  height: 100vh; }
+  height: 100vh;
+  color: white; }
 
 .triple {
   padding: 0px; }

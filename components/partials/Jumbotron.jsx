@@ -1,6 +1,6 @@
 var React = require('react');
 
-var Jumbotron = React.createClass({
+module.exports = React.createClass({
 	render: function () {
 		return (
 			<div>
@@ -14,5 +14,3 @@ var Jumbotron = React.createClass({
 		);
 	}
 });
-
-module.exports = Jumbotron;
