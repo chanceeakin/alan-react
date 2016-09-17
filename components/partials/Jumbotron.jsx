@@ -7,7 +7,7 @@ var Jumbotron = React.createClass({
 				<div className="jumbotron center-align">
 					<div className="darken-effect">
 						<h1 className="main-header">AP Human Geography</h1>
-						<a className="waves-effect waves-light btn amber darken-4">Let's Begin.</a>
+						<a className="waves-effect waves-light btn jumbotron-button">Let's Begin.</a>
 					</div>
 				</div>
 			</div>

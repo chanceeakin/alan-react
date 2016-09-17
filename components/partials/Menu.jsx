@@ -1,5 +1,5 @@
 var React = require('react');
-var Menu = require('react-burger-menu').scaledown;
+var Menu = require('react-burger-menu').pushRotate;
 
 module.exports = React.createClass({
 	showSettings: function (event) {
@@ -7,15 +7,12 @@ module.exports = React.createClass({
 	},
 	render: function () {
 		return (
-			<div id="outer-container">
-				<Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
-				<main id="page-wrap">
-					<a id="home" className="menu-item" href="/">Home</a>
-					<a id="about" className="menu-item" href="/about">About</a>
-					<a id="contact" className="menu-item" href="/contact">Contact</a>
-					<a onClick={this.showSettings} className="menu-item--small" href="">Settings</a>
-				</main>
-			</div>
+			<Menu>
+				<a id="home" className="menu-item" href="/">Home</a>
+				<a id="about" className="menu-item" href="/about">About</a>
+				<a id="contact" className="menu-item" href="/contact">Contact</a>
+				<a onClick={this.showSettings} className="menu-item--small" href="">Settings</a>
+			</Menu>
 		);
 	}
 });

@@ -5,14 +5,12 @@ var style = {
 	background: 'cyan'
 };
 
-var SideBar = React.createClass({
+module.exports = React.createClass({
 	render: function () {
 		return (
-			<div className="col s9" style={{backgroundColor: style.background}}>
+			<div id="callout" className="col s12 content center-align" style={{backgroundColor: style.background}}>
 				<h2>Ooooh wee. More content here.</h2>
 			</div>
 		);
 	}
 });
-
-module.exports = SideBar;

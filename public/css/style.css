@@ -10,6 +10,9 @@
   background: rgba(0, 0, 0, 0.3);
   height: 100vh; }
 
+.jumbotron-button {
+  background-color: #ff7043; }
+
 .menu-button {
   margin: 2rem; }
 
@@ -18,5 +21,51 @@
   padding-top: 60vh;
   color: #fff; }
 
+.content {
+  height: 100vh; }
+
 .triple {
   padding: 0px; }
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px; }
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #ff7043; }
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px; }
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7; }
+
+nav {
+  background: #ff7043; }
+
+/* General sidebar styles */
+.bm-menu {
+  background-color: #373a47;
+  font-size: 1.15em;
+  text-align: center; }
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47; }
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em; }
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3); }

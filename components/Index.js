@@ -1,19 +1,18 @@
 var React = require('react');
-var SideBar = require('./partials/SideBar.jsx');
+
+var Menu = require('./partials/Menu.jsx');
 var Content = require('./partials/Content.jsx');
 var Jumbotron = require('./partials/Jumbotron.jsx');
 var Triple = require('./partials/Triple.jsx');
 
 var Index = React.createClass({
-	getInitialState: function () {
-		return null;
-	},
 	render: function () {
 		return (
 			<div>
+				<Menu />
 				<div className="row">
-					<SideBar />
-					<Jumbotron />
+					<Jumbotron
+						scrollContent={this.scrollContent} />
 					<Content />
 				</div>
 				<div className="row">
