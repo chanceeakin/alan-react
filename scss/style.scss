@@ -1,5 +1,14 @@
 $accent: #ff7043;
 
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
 
 .jumbotron {
 	background-image: url('../img/river.jpg');
@@ -87,4 +96,25 @@ nav {
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  height: 100vh;
+}
+
+.content .row .content-title {
+  padding: 10vh;
+  color: #fff;
+}
+
+.content.row.content-paragraph {
+  color: #fff;
+}
+
+footer.page-footer {
+    background-color: $accent;
+}
+
+footer li a {
+  color: white;
 }
